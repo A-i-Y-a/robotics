@@ -12,7 +12,7 @@ class Robot extends TimedRobot {
     DifferentialDrive drive;
     XboxController controller;
     
-    void robotInit() {
+    public void robotInit() {
         motorFL = new WPI_TalonSRX(1);
         motorFR = new WPI_TalonSRX(2);
         motorBL = new WPI_TalonSRX(3);
@@ -26,11 +26,11 @@ class Robot extends TimedRobot {
         drive = new DifferentDrive(left, right);
     }
 
-    void teleopInit() {
+    public void teleopInit() {
         
     }
     
-    void teleopPeriodic() {
+    public void teleopPeriodic() {
         
 
         if (controller.getAButton() == true) {
